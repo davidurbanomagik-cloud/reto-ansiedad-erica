@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deja de calmar la ansiedad. Aprende a regularla desde la raíz en 3 días - Erica Di Cione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #E8A541;
+            --color-secondary: #7B5BA1;
+            --color-cream: #F5EFE6;
+            --color-text: #2C2416;
+            --color-light-bg: #FDF8F0;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--color-text);
+            line-height: 1.7;
+            background: var(--color-light-bg);
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative elements */
+        .page::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--color-primary) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .page::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--color-secondary) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        /* Cover Page */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #D89432 100%);
+            padding: 80px 50px;
+            position: relative;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(123,91,161,0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Decorative SVG illustrations */
+        .deco {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .deco-center-top {
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            opacity: 0.75;
+        }
+
+        .cover h1, .cover .subtitle, .cover .author {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .yoga-silhouette img {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+        }
+
+        .cover h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin: 20px 0;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover .subtitle {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.6rem;
+            color: var(--color-cream);
+            margin: 15px 0 40px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover .author {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--color-cream);
+            font-weight: 400;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin: 40px 0 25px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--color-primary);
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin: 30px 0 15px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 15px 0;
+            font-size: 1.05rem;
+        }
+
+        strong {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: var(--color-cream);
+            border-left: 4px solid var(--color-primary);
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #D89432 100%);
+            color: white;
+            padding: 30px;
+            margin: 40px -50px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .day-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .option-card {
+            background: var(--color-light-bg);
+            border: 2px solid var(--color-primary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232, 165, 65, 0.2);
+        }
+
+        .option-card h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #6A4D8F 100%);
+            color: white;
+            padding: 40px;
+            margin: 50px -50px 0;
+            text-align: center;
+            border-radius: 0;
+        }
+
+        .cta-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .cta-box strong {
+            color: var(--color-primary);
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: var(--color-primary);
+            margin: 40px auto;
+        }
+
+        @media print {
+            .page {
+                box-shadow: none;
+                page-break-after: always;
+            }
+            
+            .cover {
+                page-break-after: always;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                padding: 40px 30px;
+            }
+
+            .cover h1 {
+                font-size: 2.5rem;
+            }
+
+            .cover .subtitle {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .day-header {
+                margin-left: -30px;
+                margin-right: -30px;
+                padding: 25px 20px;
+            }
+
+            .cta-box {
+                margin-left: -30px;
+                margin-right: -30px;
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="cover">
+
+        <!-- SVG CENTER TOP: Sun/mandala small -->
+        <svg class="deco deco-center-top" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="12" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="40" cy="40" r="6" fill="none" stroke="white" stroke-width="1.2" opacity="0.6"/>
+            <circle cx="40" cy="40" r="2" fill="white" opacity="0.6"/>
+            <!-- Rays -->
+            <line x1="40" y1="24" x2="40" y2="16" stroke="white" stroke-width="1.3" opacity="0.55"/>
+            <line x1="40" y1="56" x2="40" y2="64" stroke="white" stroke-width="1.3" opacity="0.55"/>
+            <line x1="24" y1="40" x2="16" y2="40" stroke="white" stroke-width="1.3" opacity="0.55"/>
+            <line x1="56" y1="40" x2="64" y2="40" stroke="white" stroke-width="1.3" opacity="0.55"/>
+            <line x1="29" y1="29" x2="23" y2="23" stroke="white" stroke-width="1.2" opacity="0.45"/>
+            <line x1="51" y1="51" x2="57" y2="57" stroke="white" stroke-width="1.2" opacity="0.45"/>
+            <line x1="51" y1="29" x2="57" y2="23" stroke="white" stroke-width="1.2" opacity="0.45"/>
+            <line x1="29" y1="51" x2="23" y2="57" stroke="white" stroke-width="1.2" opacity="0.45"/>
+            <!-- Petals -->
+            <path d="M40 28 Q44 34 40 40 Q36 34 40 28Z" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+            <path d="M40 52 Q44 46 40 40 Q36 46 40 52Z" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+            <path d="M28 40 Q34 44 40 40 Q34 36 28 40Z" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+            <path d="M52 40 Q46 44 40 40 Q46 36 52 40Z" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+        </svg>
+
+        <h1>Deja de calmar la ansiedad.<br>Aprende a regularla desde la raíz en 3 días</h1>
+        <p class="subtitle">(sin medicación ni terapia)</p>
+        <p class="author">Erica Di Cione</p>
+    </div>
+
+    <!-- CONTENT PAGES -->
+    <div class="page">
+        <h2><span class="emoji">🔥</span> El Sacudón Consciente</h2>
+        
+        <p>Si la ansiedad vuelve una y otra vez, quizás no sea porque te falten herramientas… sino porque todavía no forman parte real de tu vida.</p>
+
+        <p>No alcanza con meditar algunos días, respirar cuando estás desbordado o intentar calmarte solo cuando ya no podés más.</p>
+
+        <p>Tal vez ya probaste muchas cosas: meditaste, hiciste terapia, hablaste con alguien, intentaste cambiar hábitos… y aun así la ansiedad vuelve.</p>
+
+        <p>Y no, no es porque estés fallando.</p>
+
+        <p>Es porque la vida sigue avanzando, las demandas aparecen, el estrés se acumula… y cuando tus pilares internos no están sostenidos, la mente pierde equilibrio.</p>
+
+        <p><strong>La ansiedad no aparece de la nada.</strong></p>
+
+        <p>Aparece cuando tu energía vital —tu prana— empieza a desequilibrarse: cuando descansás mal, cuando vivís desconectado de tu cuerpo, cuando respirás superficialmente, cuando el estrés se vuelve constante.</p>
+
+        <p>Entonces intentamos apagar el síntoma… en lugar de observar qué lo está generando.</p>
+
+        <div class="highlight-box">
+            <p><strong>La verdad es esta:</strong></p>
+            <p>Tus estados mentales no dependen solo de los sucesos, sino de cómo estás viviendo cada día.</p>
+            <p>Y eso no es un problema. Es una enorme buena noticia.</p>
+        </div>
+
+        <p>Porque significa que no estás condenado a sentirte así.</p>
+
+        <p>Cuando aprendés a observar tus hábitos, a sostener prácticas simples y a elevar tus niveles de energía vital, empezás a reconocer la ansiedad antes de que te tome… y ahí aparece la verdadera libertad.</p>
+    </div>
+
+    <div class="page">
+        <h2><span class="emoji">🧘‍♀️</span> Por Eso Creé Este Reto de 3 Días</h2>
+
+        <p>Quiero que aprendas a:</p>
+        <ul>
+            <li>✨ observarte con claridad,</li>
+            <li>✨ reconocer qué hábitos estás sosteniendo día a día,</li>
+            <li>✨ y construir una base que te permita aquietar tu mente de forma consciente y sostenible.</li>
+        </ul>
+
+        <p>En estos tres días vas a descubrir que tenés el poder —y también la responsabilidad— de transformar tus estados mentales a través de tus hábitos.</p>
+
+        <p>Y yo voy a acompañarte paso a paso.</p>
+
+        <div class="highlight-box">
+            <p><strong>"La única forma de calmar la ansiedad es reconocerla y generar hábitos que te permitan mantenerte ecuánime independientemente de los sucesos que acontecen."</strong></p>
+            <p><strong>La mente se entrena.</strong></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2><span class="emoji">🧘‍♀️</span> Las Fuentes Silenciosas que Pueden Estar Alimentando Tu Ansiedad</h2>
+
+        <p>Desde la visión del yoga y el Ayurveda, nuestra estabilidad emocional depende de cómo circula el prana, la energía vital que sostiene el cuerpo, la mente y la conciencia.</p>
+
+        <p>Cuando nuestros hábitos diarios están en equilibrio, el prana fluye con armonía: hay claridad mental, descanso profundo y mayor capacidad para gestionar el estrés.</p>
+
+        <p>Cuando estos aspectos se desordenan, la energía se dispersa, el sistema nervioso se sobreestimula y aparecen estados de ansiedad.</p>
+
+        <p><strong>Estas son las 5 fuentes principales que trabajo con mis alumnas</strong> <em>(y cada una de ellas tiene capas de profundidad que vamos explorando con el tiempo):</em></p>
+    </div>
+
+    <div class="page">
+        <h3><span class="emoji">🥑</span> 1. La alimentación modifica tus estados mentales</h3>
+
+        <p>Desde la mirada ayurvédica, los alimentos influyen directamente en la energía y en la calidad de la mente.</p>
+
+        <p><strong>Alimentos sáttvicos</strong> → promueven calma, claridad y equilibrio.<br>
+        Ejemplos: frutas frescas, verduras, legumbres, cereales integrales, frutos secos, semillas y comidas recién preparadas.</p>
+
+        <p><strong>Alimentos rajásicos</strong> → estimulan y activan. Pueden dar energía física, pero aumentan la agitación mental cuando predominan.<br>
+        Ejemplos: café, té negro, picantes intensos, azúcar refinada, frituras, exceso de sal.</p>
+
+        <p><strong>Alimentos tamásicos</strong> → generan pesadez y menor claridad mental.<br>
+        Ejemplos: ultraprocesados, comida recalentada, exceso de alcohol, alimentos muy industrializados.</p>
+
+        <p>Cuando la alimentación pierde equilibrio, el sistema nervioso tiene más dificultad para autorregularse.</p>
+
+        <div class="divider"></div>
+
+        <h3><span class="emoji">⏰</span> 2. El descanso no está siendo verdaderamente reparador</h3>
+
+        <p>No importa solo cuánto dormís, sino si el cuerpo logra entrar en modo reparación.</p>
+
+        <p>El sueño se fragmenta cuando:</p>
+        <ul>
+            <li>la cena es pesada o tardía,</li>
+            <li>las pantallas y la luz azul mantienen al cerebro en alerta,</li>
+            <li>la mente continúa activa porque el día no tuvo un cierre consciente.</li>
+        </ul>
+
+        <p>Un cuerpo que no repara permanece en estado de alerta constante.</p>
+
+        <div class="divider"></div>
+
+        <h3><span class="emoji">🧘‍♀️</span> 3. Falta de pausas conscientes y exceso de estímulos</h3>
+
+        <p>El paso constante de un estímulo a otro —redes, pantallas, trabajo e información continua— mantiene la mente en activación permanente.</p>
+
+        <p>Sin momentos de silencio y respiración consciente, las emociones no se integran, los pensamientos se acumulan y el sistema nervioso permanece en alerta.</p>
+
+        <p>Tomarse breves momentos para respirar conscientemente y alejarse de las pantallas permite desacelerar la mente, recuperar claridad y restablecer el equilibrio interno.</p>
+    </div>
+
+    <div class="page">
+        <h3><span class="emoji">🤸‍♀️</span> 4. Falta de movimiento y actividad física</h3>
+
+        <p>El cuerpo necesita movimiento para descargar tensión y regular el sistema nervioso.</p>
+
+        <p>La actividad física mejora la oxigenación, equilibra hormonas del estrés y favorece la liberación de neurotransmisores asociados al bienestar, ayudando a disminuir la ansiedad y estabilizar el estado de ánimo.</p>
+
+        <div class="divider"></div>
+
+        <h3><span class="emoji">🍃</span> 5. Desconexión de la naturaleza y del ritmo biológico</h3>
+
+        <p>El contacto con la naturaleza regula naturalmente el sistema nervioso, reduce el estrés basal y ayuda a sincronizar el cuerpo con ciclos de luz, descanso y energía más equilibrados.</p>
+
+        <div class="divider"></div>
+
+        <h3>El estado natural del ser no es la agitación, sino la calma.</h3>
+
+        <p>Muchas personas han llegado a naturalizar vivir en estados constantes de inquietud interna, como si la mente acelerada y la tensión fueran la forma normal de existir.</p>
+
+        <p>Pero desde la mirada del yoga, el estado natural del ser no es la agitación, sino la serenidad y la ecuanimidad.</p>
+
+        <p>La mente humana tiende a moverse constantemente en el tiempo: vuelve al pasado o se proyecta hacia el futuro. Cuando queda atrapada en el futuro —anticipando, controlando o preocupándose por lo que todavía no ocurrió— aparece la ansiedad.</p>
+
+        <p>Porque <strong>la vida no ocurre mañana.</strong></p>
+
+        <p>Ocurre cuando compartís una conversación, cuando comés de forma consciente, cuando mirás a alguien a los ojos, cuando estás verdaderamente presente en aquello que te nutre.</p>
+
+        <p>Y tal vez la ansiedad no sea otra cosa que un recordatorio de que tu mente se fue demasiado lejos… y tu presencia necesita volver a casa.</p>
+    </div>
+
+    <div class="page">
+        <h2><span class="emoji">🌿</span> Reto de 3 Días — Resetear Tu Sistema Nervioso</h2>
+
+        <p style="font-style: italic; color: var(--color-secondary);">Un proceso simple y consciente para comenzar a disminuir la ansiedad regulando tu energía vital.</p>
+
+        <p>Este reto no busca que cambies tu vida en tres días.</p>
+        <p>Busca algo más importante: que empieces a observarte, comprenderte y crear pequeñas regulaciones que devuelvan equilibrio a tu sistema nervioso.</p>
+
+        <div class="highlight-box">
+            <p><strong>Cuando el prana se ordena, la mente se aquieta naturalmente.</strong></p>
+        </div>
+
+        <div class="day-header">
+            <h3>DÍA 1 — REGISTRO CONSCIENTE: APRENDER A VERTE</h3>
+        </div>
+
+        <p><strong>Hoy no vas a cambiar nada. Solo vas a desarrollar conciencia.</strong></p>
+
+        <p>Durante todo el día llevá un registro lo más detallado posible de cómo vivís tu rutina real.</p>
+
+        <h4>Observá y anotá:</h4>
+
+        <h4><span class="emoji">🧠</span> Mente</h4>
+        <ul>
+            <li>¿Qué pensamientos aparecen al despertar?</li>
+            <li>¿Predominan pensamientos tranquilos o rumiantes?</li>
+            <li>¿Tu mente se proyecta al futuro o repite preocupaciones?</li>
+            <li>¿Cómo cambia tu diálogo interno a lo largo del día?</li>
+        </ul>
+
+        <h4><span class="emoji">🍽</span> Alimentación</h4>
+        <ul>
+            <li>Qué comés exactamente desde que te levantás hasta que te acostás.</li>
+            <li>Cómo te sentís después de cada comida (energía, pesadez, claridad mental, ansiedad).</li>
+        </ul>
+
+        <h4><span class="emoji">😴</span> Descanso</h4>
+        <ul>
+            <li>¿Cómo dormiste la noche anterior?</li>
+            <li>¿Sentís que tu cuerpo reparó?</li>
+            <li>¿Tu mente amaneció clara o ya estaba acelerada?</li>
+        </ul>
+
+        <h4><span class="emoji">⚡</span> Energía corporal</h4>
+        <ul>
+            <li>Momentos del día donde te sentiste con calma.</li>
+            <li>Momentos donde apareció tensión, ansiedad o cansancio.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>Anotá al menos 5 observaciones reales.</strong><br>
+            Sin juicio. Sin corregir.</p>
+            <p style="margin-top: 15px;"><strong>Lo que no se observa, no puede transformarse.</strong></p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="day-header">
+            <h3>DÍA 2 — UN AJUSTE CONSCIENTE EN LAS 5 FUENTES</h3>
+        </div>
+
+        <p><strong>Hoy vas a elegir solo UN pilar para generar un cambio pequeño pero intencional.</strong></p>
+
+        <p>No buscamos perfección. Buscamos regulación.</p>
+
+        <div class="option-card">
+            <h4><span class="emoji">🌬</span> 1. Respiraciones conscientes:</h4>
+            <p>Realizá 3 micropausas de 3 minutos durante el día:</p>
+            <ul>
+                <li>Sentate con la columna recta.</li>
+                <li>Cerrá los ojos.</li>
+                <li>Respiración nasal lenta y consciente.</li>
+                <li>Solo observar el aire entrar y salir.</li>
+            </ul>
+            <p><em>Esto le enseña al sistema nervioso a salir del modo alerta.</em></p>
+        </div>
+
+        <div class="option-card">
+            <h4><span class="emoji">😴</span> 2. Descanso — Método 3-2-1</h4>
+            <ul>
+                <li>Comer 3 horas antes de dormir.</li>
+                <li>Evitar beber líquidos 2 horas antes.</li>
+                <li>Apagar pantallas 1 hora antes de acostarte.</li>
+            </ul>
+            <p><em>Permitís que el cuerpo entienda que es momento de reparar.</em></p>
+        </div>
+
+        <div class="option-card">
+            <h4><span class="emoji">🚶‍♀️</span> 3. Actividad física consciente</h4>
+            <p>Además de cualquier entrenamiento habitual:</p>
+            <ul>
+                <li>Realizá pausas activas cada 1–2 horas.</li>
+                <li>Mové el cuerpo suavemente: caminar, estirar, movilizar articulaciones o respirar en movimiento.</li>
+            </ul>
+            <p><em>El movimiento descarga tensión acumulada y regula hormonas del estrés.</em></p>
+        </div>
+
+        <div class="option-card">
+            <h4><span class="emoji">🌿</span> 4. Contacto con la naturaleza</h4>
+            <p>Buscá un momento para:</p>
+            <ul>
+                <li>Caminar al aire libre,</li>
+                <li>Respirar profundamente,</li>
+                <li>Si es posible, apoyar los pies descalzos sobre tierra o pasto.</li>
+            </ul>
+            <p><em>La naturaleza reorganiza el sistema nervioso de forma directa.</em></p>
+        </div>
+
+        <div class="option-card">
+            <h4><span class="emoji">🥗</span> 5. Alimentación consciente</h4>
+            <p>Solo por hoy, elegí alimentos que provengan de la naturaleza:</p>
+            <ul>
+                <li>Evitá ultraprocesados y productos envasados.</li>
+                <li>Priorizá alimentos sáttvicos y algunos rajásicos suaves.</li>
+                <li>Observá cómo cambia tu energía durante el día.</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Elegí solo uno y comprometete plenamente durante 24 horas.</strong></p>
+            <p style="margin-top: 10px;">Pequeños ajustes generan grandes cambios en el prana.</p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="day-header">
+            <h3>DÍA 3 — INTEGRACIÓN Y MEDITACIÓN</h3>
+        </div>
+
+        <p>Ahora que observaste tu mente y realizaste un ajuste consciente, tu sistema ya no está exactamente igual.</p>
+
+        <p><strong>Hoy vas a integrar.</strong></p>
+
+        <p>Realizá la meditación guiada con el enlace que tenés en la descripción de la comunidad de WhatsApp.</p>
+
+        <h4>Antes de comenzar, preguntate:</h4>
+        <ul>
+            <li>¿Cómo estaba mi mente antes de este reto?</li>
+            <li>¿Qué cambió después de observarme y ajustar un hábito?</li>
+        </ul>
+
+        <h4>Durante la meditación:</h4>
+        <ul>
+            <li>Permití que el cuerpo se aquiete.</li>
+            <li>Permití que la respiración se vuelva natural.</li>
+            <li>No busques controlar la mente: solo regresar al presente.</li>
+        </ul>
+
+        <p>Después, registrá cómo te sentís.</p>
+
+        <div class="highlight-box">
+            <p>Porque la verdadera comprensión no llega desde leer o entender… <strong>llega desde experimentar.</strong></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2><span class="emoji">🌙</span> Cierre: Lo Importante</h2>
+
+        <p>Estos tres días no fueron para cambiar tu vida de golpe.</p>
+
+        <p>Fueron para algo más importante: aprender a observar cómo estás viviendo.</p>
+
+        <p>Registrar tus hábitos, hacer los ajustes que necesitás, agradecer aquello que ya estás haciendo bien y tomar conciencia de lo que hoy requiere ser reajustado para acompañarte mejor.</p>
+
+        <div class="highlight-box">
+            <p><strong>Porque la calma no aparece por casualidad. Se construye a través de pequeñas decisiones diarias que sostienen tu energía, tu mente y tu cuerpo.</strong></p>
+        </div>
+
+        <p>La vida siempre va a estar en movimiento. Van a existir desafíos, cambios y momentos que inevitablemente nos sacudan. Pero cuando tus bases internas son sólidas, es mucho más difícil perder el equilibrio. Y cuando lo perdés —porque a veces sucede— también es mucho más fácil volver.</p>
+
+        <p style="text-align: center; font-style: italic; margin: 30px 0;">
+            Volver a la respiración.<br>
+            Volver al cuerpo.<br>
+            Volver al momento presente.
+        </p>
+
+        <p>Porque vivir en presencia no significa que todo sea perfecto, sino tener los recursos internos para habitar cada experiencia con mayor serenidad y conciencia.</p>
+
+        <div class="highlight-box">
+            <p><strong>Ahora sabés algo importante: es tu responsabilidad crear los hábitos que te permitan vivir con más claridad, más presencia y más equilibrio.</strong></p>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Este reto es solo el primer paso.</h2>
+
+        <p>Lo que trabajamos en estos 3 días —observar, regular y volver al centro— es parte de una metodología mucho más extensa que es imposible de mostrar en una guía o en un reto de 3 días. Hay herramientas más profundas, prácticas sostenidas en el tiempo, y acompañamiento real que hace la diferencia entre "probar algo nuevo" y "transformar tu forma de habitar la vida".</p>
+
+        <div class="cta-box">
+            <p>Cada semana voy a estar compartiendo contenido exclusivo acá en la comunidad para seguir profundizando juntos.</p>
+            <p style="margin-top: 25px; font-size: 1.25rem;"><strong>Estate atento porque estoy trabajando en algo que sé que te va a encantar y que va a acompañarte a volver a tu centro de forma sostenida.</strong></p>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; color: var(--color-secondary); font-style: italic;">
+            <p>Con amor,</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 10px;">Erica Di Cione</p>
+        </div>
+    </div>
+
+</body>
+</html>
